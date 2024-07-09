@@ -1,0 +1,5 @@
+rootProject.name = 'otus-java-dev-basic'
+include '01-collections'
+include '02-java-io'
+include '03-concurrency'
+
