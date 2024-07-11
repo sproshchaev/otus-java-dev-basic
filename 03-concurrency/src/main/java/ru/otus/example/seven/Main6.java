@@ -34,7 +34,6 @@ public class Main6 {
                 throw new RuntimeException(e);
             }
         });
-        // пробраcываем Exception
         System.out.println(future.get()); // null (так как .run() возвращает void)
         System.out.println("Finished thread");
         executorService.shutdownNow();
@@ -60,7 +59,7 @@ public class Main6 {
         /**
          * Метод future.get() является блокирующим - наше приложение будет висеть на этом месте пока мы не получим ответ
          */
-        System.out.println(future.get()); // Hello World!
+        System.out.println(future.get()); // Hello World! (строка 55)
         System.out.println("Finished thread");
         executorService.shutdownNow();
     }

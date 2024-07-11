@@ -2,6 +2,8 @@ package ru.otus.example.seven;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 29 Основы многопоточности. Часть 2
@@ -13,6 +15,7 @@ public class Main7 {
         singleThreadExecutorDemo();
         fixedThreadPoolDemo();
         cachedThreadPoolDemo();
+        scheduledThreadPoolDemo();
     }
 
     /**
@@ -52,9 +55,28 @@ public class Main7 {
     }
 
     /**
-     *   4) ScheduledThreadPool - позволяет запускать задачу по определенному расписанию - раз в час, через 20 секунд и тп
-     *   ExecutorService executorService = Executors.newScheduledThreadPool(...);
-     *   где ... задается порядок запуска.
+     * 4) ScheduledThreadPool - позволяет запускать задачу с задержкой по указанному времени
      */
+    private static void scheduledThreadPoolDemo() {
+        // Создание ScheduledThreadPool с фиксированным количеством потоков
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
 
+        for (int i = 0; i < 150; i++) {
+            // Планирование выполнения задачи с задержкой в 1 секунду
+            scheduledExecutorService.schedule(() -> {
+                System.out.println(Thread.currentThread().getName());
+            }, 1, TimeUnit.SECONDS);
+        }
+
+        // Ожидание завершения всех задач
+        scheduledExecutorService.shutdown();
+        try {
+            // Ожидание завершения всех задач в течение 60 секунд. Если задачи не завершились в отведенное время, принудительно завершает работу пула.
+            if (!scheduledExecutorService.awaitTermination(60, TimeUnit.SECONDS)) {
+                scheduledExecutorService.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            scheduledExecutorService.shutdownNow();
+        }
+    }
 }
