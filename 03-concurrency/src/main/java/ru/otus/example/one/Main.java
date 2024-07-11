@@ -1,4 +1,4 @@
-package ru.otus;
+package ru.otus.example.one;
 
 /**
  * 29 Основы многопоточности. Часть 2
