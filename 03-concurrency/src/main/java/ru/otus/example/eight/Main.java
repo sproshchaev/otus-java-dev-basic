@@ -23,6 +23,7 @@ public class Main {
         Object monitor = new Object();
         Box box = new Box();
 
+        /** Первый поток будет пытаться поместить в ящик предмет, если он пуст */
         new Thread(() -> {
             while (true) {
                 synchronized (monitor) {
@@ -39,6 +40,7 @@ public class Main {
             }
         }).start();
 
+        /** Второй поток будет пытаться очистить ящик, если он полон */
         new Thread(() -> {
             while (true) {
                 synchronized (monitor) {
@@ -56,6 +58,9 @@ public class Main {
         }).start();
     }
 
+    /**
+     * Класс ящик
+     */
     private static class Box {
         private String item;
 
