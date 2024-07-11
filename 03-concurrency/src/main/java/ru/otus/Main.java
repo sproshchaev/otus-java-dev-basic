@@ -1,13 +1,29 @@
 package ru.otus;
 
+/**
+ * 29 Основы многопоточности. Часть 2
+ */
 public class Main {
+
     public static void main(String[] args) {
         Main main1 = new Main();
         Main main2 = new Main();
         new Thread(() -> main1.method1()).start();
         new Thread(() -> main1.method1()).start();
+
+        /**
+         * Пример 2:
+         * ---------
+         * Если два потока у одного и того же объекта main1 вызывают разные синхронизированные методы .method1() и .method2(),
+         * то такое выполнение будет ТОЖЕ последовательным:
+         */
+        // new Thread(() -> main1.method1()).start();
+        // new Thread(() -> main1.method2()).start();
     }
-    // Синхронизированный метод 1
+
+    /**
+     * Синхронизированный метод 1
+     */
     public synchronized void method1() {
         System.out.println(Thread.currentThread().getName() + " method1() started");
         try {
@@ -17,7 +33,10 @@ public class Main {
         }
         System.out.println(Thread.currentThread().getName() + " method1() ended");
     }
-    // Синхронизированный метод 2
+
+    /**
+     * Синхронизированный метод 2
+     */
     public synchronized void method2() {
         System.out.println(Thread.currentThread().getName() + " method2() started");
         try {
@@ -27,7 +46,10 @@ public class Main {
         }
         System.out.println(Thread.currentThread().getName() + " method2() ended");
     }
-    // Этот метод без синхронизации
+
+    /**
+     * Этот метод без синхронизации
+     */
     public void method3() {
         System.out.println(Thread.currentThread().getName() + " method3() started");
         try {
@@ -37,4 +59,5 @@ public class Main {
         }
         System.out.println(Thread.currentThread().getName() + " method3() ended");
     }
+
 }
