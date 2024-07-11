@@ -41,7 +41,7 @@ public class Main7 {
 
     /**
      * 3) CachedThreadPool - Работает как саморасширяющйся пул потоков. У него нет верхнего предела, поэтому если ему дать
-     * задач больше, чем есть свободных ресурсов, то он использует все и система може упасть.
+     * задач больше, чем есть свободных ресурсов, то он использует все и система может упасть.
      */
     private static void cachedThreadPoolDemo() {
         ExecutorService executorService = Executors.newCachedThreadPool();
