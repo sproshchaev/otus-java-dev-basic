@@ -59,7 +59,7 @@ public class Main {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    //e.printStackTrace(); // <-  если раскоммент. то будет искл.
+                    // e.printStackTrace(); // <-  если раскоммент. то будет искл. InterruptedException
                     interrupted = true; // здесь обрабатываем InterruptedException в момент сна потока
                 }
             }
