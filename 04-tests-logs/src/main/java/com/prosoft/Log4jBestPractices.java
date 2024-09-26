@@ -7,6 +7,16 @@ import org.apache.logging.log4j.MarkerManager;
 import org.apache.logging.log4j.ThreadContext;
 import java.io.IOException;
 
+/**
+ * Инициализация логгера (Пример 1) с использованием LogManager.getLogger().
+ * Логирование с использованием placeholder {} для форматирования сообщений (Пример 2).
+ * Логирование исключения с использованием метода error() и передачи исключения последним аргументом (Пример 3 и Пример 4).
+ * Использование лямбд (Suppliers) для передачи вычислительно затратных аргументов (Пример 5).
+ * Логирование с использованием форматирования printf (Пример 6).
+ * Логирование с использованием маркеров (Markers) для более детализированного контроля логов (Пример 7).
+ * Использование traceEntry() и traceExit() для отслеживания выполнения программы (Пример 8).
+ * Работа с ThreadContext для передачи контекстных данных (Пример 10).
+ */
 public class Log4jBestPractices {
 
     private static final Logger LOGGER = LogManager.getLogger(); // Пример 1: Инициализация логгера
