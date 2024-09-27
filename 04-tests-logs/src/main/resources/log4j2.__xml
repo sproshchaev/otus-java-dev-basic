@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
-
-    <!-- Конфигурация логирования. status="WARN" означает, что сообщения о конфигурации Log4j будут выводиться только при уровне WARN или выше. -->
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="https://logging.apache.org/xml/ns"
+               xsi:schemaLocation="
+                       https://logging.apache.org/xml/ns
+                       https://logging.apache.org/xml/ns/log4j-config-2.xsd">
 
     <!-- Логи выводятся только в файл -->
 
