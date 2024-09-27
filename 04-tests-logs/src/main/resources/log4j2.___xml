@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="https://logging.apache.org/xml/ns"
+               xsi:schemaLocation="
+                       https://logging.apache.org/xml/ns
+                       https://logging.apache.org/xml/ns/log4j-config-2.xsd">
+
+    <!-- Логи выводятся в консоль и файл. Сообщения с уровнем error дублируются в logs/error.log -->
+
+    <Appenders>
+        <!-- Консольный аппендер: выводит логи в стандартный вывод (консоль).
+             Используется имя "Console" и вывод идет в SYSTEM_OUT (по умолчанию это консоль приложения). -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- Определение шаблона для вывода лога в консоль.
+                 %d - дата, %-5p - уровень логирования, %c{1} - имя класса, %L - номер строки, %m - сообщение, %n - новая строка -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+
+        <!-- Файловый аппендер: выводит логи в файл "logs/app.log".
+             append="true" означает, что логи будут добавляться в конец файла, а не перезаписываться. -->
+        <File name="FileLogger" fileName="logs/app.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </File>
+
+        <!-- Файловый аппендер для записи только ошибок уровня ERROR в файл error.log -->
+        <File name="ErrorFileLogger" fileName="logs/error.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+            <!-- Определяем фильтр, чтобы записывать только сообщения уровня ERROR и выше -->
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Корневой логгер: применяется по умолчанию ко всем классам.
+             Уровень логирования "info" означает, что сообщения уровня INFO и выше (WARN, ERROR) будут выводиться.
+             AppenderRef ref="Console" и AppenderRef ref="FileLogger" указывают, что логи будут выводиться как в консоль, так и в файл.
+             Добавляем ErrorFileLogger для записи ошибок уровня ERROR в отдельный файл. -->
+        <Root level="info">
+            <AppenderRef ref="Console"/> <!-- Логи выводятся в консоль -->
+            <AppenderRef ref="FileLogger"/> <!-- Логи записываются в файл -->
+            <AppenderRef ref="ErrorFileLogger"/> <!-- Ошибки ERROR записываются в отдельный файл -->
+        </Root>
+    </Loggers>
+</Configuration>

@@ -32,8 +32,8 @@ public class Log4jBestPractices {
 
         try {
             // Пример 3: Передача исключения как последнего аргумента
-            // truncateTable(null);
-            truncateTable(tableName);
+            truncateTable(null);
+            //truncateTable(tableName);
         } catch (IOException e) {
             // Пример 4: Логирование исключения на уровне ERROR
             LOGGER.error("Ошибка при очистке таблицы `{}` для пользователя `{}`", tableName, userId, e);
