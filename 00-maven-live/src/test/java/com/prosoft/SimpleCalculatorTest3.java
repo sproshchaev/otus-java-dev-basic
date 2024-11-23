@@ -2,7 +2,7 @@ package com.prosoft;
 
 import org.junit.jupiter.api.*;
 
-public class SimpleCalculatorTest3 {
+class SimpleCalculatorTest3 {
     private SimpleCalculator calculator;
 
     // Выполняется перед всеми тестами, метод должен быть статическим

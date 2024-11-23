@@ -3,7 +3,7 @@ package com.prosoft;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SimpleCalculatorTest2 {
+class SimpleCalculatorTest2 {
 
     private SimpleCalculator calculator = new SimpleCalculator();
 
