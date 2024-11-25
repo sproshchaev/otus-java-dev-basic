@@ -244,6 +244,51 @@ public class Main {
         if (carShortBrand != null) {
             System.out.println("Автомобиль с самым коротким полем brand: " + carShortBrand.getBrand());
         }
+
+        /**
+         * Пример проверки на null и !null
+         */
+        ArrayList<String> nullList = new ArrayList<>();
+
+        nullList.add("Apple");
+        nullList.add(null);
+        nullList.add("Banana");
+        nullList.add(null);
+        nullList.add("Cherry");
+
+        System.out.println("Список содержит null: " + nullList);
+
+        for (String item : nullList) {
+            if (item == null) {
+                System.out.println("найден null");
+            } else {
+                System.out.println("это не null: " + item);
+            }
+        }
+
+        /**
+         * Счетчик элементов в коллекции
+         */
+        ArrayList<String> abcList = new ArrayList<>();
+
+        abcList.add("AAA");
+        abcList.add("BBB");
+        abcList.add("AAA");
+        abcList.add("CCC");
+        abcList.add("AAA");
+
+        int count = 0;
+
+        for (String item : abcList) {
+            if ("AAA".equals(item)) {
+                count++;
+            }
+        }
+
+        System.out.println("Последовательность 'AAA' найдена в коллекции " + count + " раз.");
+
+
+
     }
 }
 
