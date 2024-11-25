@@ -11,9 +11,23 @@ public class BrowseStructure {
 
     public static void main(String[] args) {
 
-        int[] array = {10, 20, 30};
 
-        browse(new LJV(), array);
+        // int[] array = {10, 20, 30};
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+
+        browse(new LJV(), list);
 
     }
 
