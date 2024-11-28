@@ -283,7 +283,7 @@ public class Main {
         System.out.println(hashSet.isEmpty());
 
         /**
-         * Пример использования компаратора в TreeMap и TreeSet
+         * Пример использования компаратора в TreeMap
          */
         Comparator<Car> brandComparator = Comparator.comparing(Car::getBrand);
 
@@ -309,9 +309,5 @@ public class Main {
         for (Car car : carTreeSet) {
             System.out.println(car);
         }
-
-
-
-
     }
 }
