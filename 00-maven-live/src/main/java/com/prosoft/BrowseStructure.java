@@ -12,8 +12,12 @@ public class BrowseStructure {
 
     public static void main(String[] args) {
 
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "One");
+        Map<String, String> map = new HashMap<>();
+        String str = "AaAaAaAa"; // хэши равны
+        map.put(str, "_Aa");
+
+        String str2 = "AaAaAaBB"; // хэши равны
+        map.put(str2, "_BB");
 
         browse(new LJV(), map);
 
