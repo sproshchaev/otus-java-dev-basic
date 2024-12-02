@@ -223,7 +223,8 @@ public class Main {
         /**
          * LinkedHashMap: использование итератора для .values()
          */
-        Iterator<Integer> itr3 = linkedHashMap.keySet().iterator();
+        System.out.println("LinkedHashMap: использование итератора для .values():");
+        Iterator<String> itr3 = linkedHashMap.values().iterator();
         while (itr3.hasNext()) {
             System.out.println("value=" + itr3.next());
         }
