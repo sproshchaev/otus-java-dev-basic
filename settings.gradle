@@ -4,4 +4,4 @@ include '01-collections'
 include '02-java-io'
 include '03-concurrency'
 include '04-tests-logs'
-
+include '05-arrays'
