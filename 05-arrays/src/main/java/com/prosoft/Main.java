@@ -30,7 +30,7 @@ public class Main {
 //            System.out.println("j=" + j);
 //        }
 
-       // Бесконечный цикл
+        // Бесконечный цикл
 //       for (;;) {
 //           System.out.println("Hello World!");
 //       }
@@ -50,7 +50,19 @@ public class Main {
         // countElements();
         // fillArrayHalfByHalf();
         // sumArray();
-        fillArray();
+        // fillArray();
+
+        // Пример передачи параметра в метод по значению (примитивы)
+        int i = 1;
+        System.out.println("i before getByValue(i)=" + i); // 1
+        getByValue(i); // значение аргумента увеличиваем на i = i + 1 внутри метода
+        System.out.println("i after getByValue(i)=" + i); // 1 - значение не изменилось, так как для примитивов передается копия значения
+
+        // Пример передачи параметра в метод по ссылке (объекты)
+        System.out.println("arr1 before getByRef(arr1)=" + Arrays.toString(arr1)); // [1, 2, 3]
+        getByRef(arr1); // обнуляем все значения элементов в массиве
+        System.out.println("arr1 after getByRef(arr1)=" + Arrays.toString(arr1)); // [0, 0, 0] - значение изменилось, так как для объектов передается ссылка на объект
+
     }
 
     public static void doSomethingWithArray(int[] arr) {
@@ -182,17 +194,18 @@ public class Main {
         System.out.println("arr=" + Arrays.toString(arr));
     }
 
+    // Получение аргумента по ссылке (примитивы)
+    public static void getByValue(int value) {
+        // изменяем значение value
+        value++;
+        System.out.println("getByValue: i=" + value);
+    }
 
+    // Получение аргумента по ссылке (объекты)
+    public static void getByRef(int[] array) {
+        // Обнуляем значения массива
+        Arrays.fill(array, 0);
+        System.out.println("getByRef: arr1=" + Arrays.toString(array));
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-} // Main
+}
