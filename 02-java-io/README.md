@@ -2,9 +2,7 @@
 # otus-java-dev-basic
 Examples from webinars
 
-[01-collections](01-collections)
-[02-java-io](02-java-io)
-
+![duke.svg](src/main/resources/images/duke.svg)
 
 ### References
 1. Collections-framework-demo https://github.com/sproshchaev/collections-framework-demo/
