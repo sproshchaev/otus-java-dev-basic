@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * 01-collections
  */
 public class Main {
 
