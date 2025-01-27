@@ -54,18 +54,18 @@ public class ArrayListPerfDemo {
         ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL); // Создаем ArrayList с 10 элементами
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            smallList.get(BASE_SIZE_SMALL / 2); // Тестируем производительность небольшого списка - получаем элемент с индексом 5
+            smallList.get(smallList.size() / 2); // Тестируем производительность небольшого списка - получаем элемент из середины списка (с индексом 5)
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", BASE_SIZE_SMALL, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallList.size(), (endTime - startTime) / ITERATIONS);
 
         ArrayList<Integer> largeList = createList(BASE_SIZE_LARGE); // Создаем ArrayList с 1 000 000 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            largeList.get(BASE_SIZE_LARGE / 2); // Тестируем производительность большого списка - получаем элемент с индексом 500000
+            largeList.get(largeList.size() / 2); // Тестируем производительность большого списка - получаем элемент из середины списка (с индексом 500000)
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", BASE_SIZE_LARGE, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeList.size(), (endTime - startTime) / ITERATIONS);
     }
 
     /**
@@ -78,18 +78,18 @@ public class ArrayListPerfDemo {
         ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL); // 10 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            smallList.set(BASE_SIZE_SMALL / 2, 1000); // Тестируем производительность небольшого списка - устанавливаем значение элемента с индексом 5
+            smallList.set(smallList.size() / 2, 1000); // Тестируем производительность небольшого списка - устанавливаем значение элемента с индексом 5
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", BASE_SIZE_SMALL, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallList.size(), (endTime - startTime) / ITERATIONS);
 
         ArrayList<Integer> largeList = createList(BASE_SIZE_LARGE); // 1 000 000 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            largeList.set(BASE_SIZE_LARGE / 2, 1000); // Тестируем производительность большого списка - устанавливаем значение элемента с индексом 5
+            largeList.set(largeList.size() / 2, 1000); // Тестируем производительность большого списка - устанавливаем значение элемента с индексом 5
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", BASE_SIZE_LARGE, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeList.size(), (endTime - startTime) / ITERATIONS);
     }
 
     /**
@@ -102,18 +102,18 @@ public class ArrayListPerfDemo {
         ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL); // Создаем ArrayList с 10 элементами
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            smallList.size(); // Тестируем производительность небольшого списка - вызываем метод size()
+            smallList.size(); // Тестируем производительность небольшого списка
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", BASE_SIZE_SMALL, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallList.size(), (endTime - startTime) / ITERATIONS);
 
         ArrayList<Integer> largeList = createList(BASE_SIZE_LARGE); // Создаем ArrayList с 1 000 000 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            largeList.size(); // Тестируем производительность большого списка - вызываем метод size()
+            largeList.size(); // Тестируем производительность большого списка
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", BASE_SIZE_LARGE, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeList.size(), (endTime - startTime) / ITERATIONS);
     }
 
     /**
@@ -126,20 +126,20 @@ public class ArrayListPerfDemo {
         ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL); // Создаем ArrayList с 10 элементами
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            smallList.remove(BASE_SIZE_SMALL / 2); // Тестируем производительность небольшого списка - удаляем элемент из середины с индексом 5
-            smallList.add(BASE_SIZE_SMALL / 2, 1000);  // Восстанавливаем элемент, чтобы сохранить размер списка
+            smallList.remove(smallList.size() / 2); // Тестируем производительность небольшого списка - удаляем элемент из середины с индексом 5
+            smallList.add(smallList.size() / 2, 1000);  // Восстанавливаем элемент, чтобы сохранить размер списка
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", BASE_SIZE_SMALL, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallList.size(), (endTime - startTime) / ITERATIONS);
 
         ArrayList<Integer> largeList = createList(BASE_SIZE_LARGE / 20); // Создаем большой ArrayList с 50 000 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            largeList.remove(BASE_SIZE_LARGE / 40); // Тестируем производительность большого списка - удаляем элемент из середины с индексом 25_000
-            largeList.add(BASE_SIZE_LARGE / 40, 1000);  // Восстанавливаем элемент, чтобы сохранить размер списка
+            largeList.remove(largeList.size() / 2); // Тестируем производительность большого списка - удаляем элемент из середины с индексом 25_000
+            largeList.add(largeList.size() / 2, 1000);  // Восстанавливаем элемент, чтобы сохранить размер списка
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", BASE_SIZE_LARGE / 20, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeList.size(), (endTime - startTime) / ITERATIONS);
     }
 
     /**
@@ -149,22 +149,21 @@ public class ArrayListPerfDemo {
 
         System.out.println("Метод contains():");
 
-        // Создаем ArrayList с 10 элементами
-        ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL);
+        ArrayList<Integer> smallList = createList(BASE_SIZE_SMALL); // Создаем ArrayList с 10 элементами
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            smallList.contains(BASE_SIZE_SMALL / 2);  // Тестируем производительность небольшого списка - проверяем наличие элемента 5
+            smallList.contains(smallList.size() / 2);  // Тестируем производительность небольшого списка - проверяем наличие элемента из середины
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", BASE_SIZE_SMALL, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallList.size(), (endTime - startTime) / ITERATIONS);
 
         ArrayList<Integer> largeList = createList(BASE_SIZE_LARGE / 100); // Создаем ArrayList с 10 000 элементов
         startTimer();
         for (int i = 0; i < ITERATIONS; i++) {
-            largeList.contains(BASE_SIZE_LARGE / 20);  // Тестируем производительность большого списка - проверяем наличие элемента 5_000
+            largeList.contains(largeList.size() / 2);  // Тестируем производительность большого списка - проверяем наличие элемента 5_000
         }
         stopTimer();
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", BASE_SIZE_LARGE / 100, (endTime - startTime) / ITERATIONS);
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeList.size(), (endTime - startTime) / ITERATIONS);
     }
 
     /**
@@ -179,36 +178,30 @@ public class ArrayListPerfDemo {
 
         System.out.println("Метод add() без расширения CAPACITY:");
         ArrayList<Integer> smallList;
-        long totalTime = 0;
         int countIterations = 0;
+        startTimer();
         while (countIterations < iterations) {
             smallList = new ArrayList<>(smallSize); // создаем ArrayList с 10 элементами
             for (int i = 0; i < smallSize; i++) {
-                startTimer();
                 smallList.add(i); // Тестируем производительность небольшого списка - добавляем элемент, не вызывая расширения капасити
-                stopTimer();
-                totalTime += (endTime - startTime);
                 countIterations++;
             }
         }
-        long averageTime = totalTime / countIterations; // Вычисляем среднее время
-        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallSize, averageTime);
+        stopTimer();
+        System.out.printf("  - время для списка из %d элементов: %d нс%n", smallSize, (endTime - startTime) / countIterations);
 
         ArrayList<Integer> largeList;
-        totalTime = 0;
         countIterations = 0;
+        startTimer();
         while (countIterations < iterations) {
             largeList = new ArrayList<>(largeSize); // создаем ArrayList с 10 элементами
             for (int i = 0; i < largeSize; i++) {
-                startTimer();
                 largeList.add(i); // Тестируем производительность большого списка - добавляем элемент, не вызывая расширения капасити
-                stopTimer();
-                totalTime += (endTime - startTime);
                 countIterations++;
             }
         }
-        averageTime = totalTime / countIterations; // Вычисляем среднее время
-        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeSize, averageTime);
+        stopTimer();
+        System.out.printf("  - время для списка из %d элементов: %d нс%n%n", largeSize, (endTime - startTime) / countIterations);
     }
 
     /**
