@@ -3,7 +3,7 @@ package com.prosoft;
 import java.util.LinkedList;
 
 /**
- * Демонс%n%nтрация производительности методов класса LinkedList
+ * Демонстрация производительности методов класса LinkedList
  */
 public class LinkedListPerfDemo {
 
