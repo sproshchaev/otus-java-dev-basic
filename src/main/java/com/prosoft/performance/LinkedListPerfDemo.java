@@ -1,4 +1,4 @@
-package com.prosoft;
+package com.prosoft.performance;
 
 import java.util.LinkedList;
 
