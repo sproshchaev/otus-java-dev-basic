@@ -38,9 +38,6 @@ public class ListDemo04 {
         linkedList.clear();
         System.out.println(linkedList);
 
-
-
-
     }
 
 }
