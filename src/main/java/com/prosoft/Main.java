@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Коллекции. Часть 1
  */
 public class Main {
 
