@@ -21,4 +21,5 @@ Examples from webinars
 ![duke.svg](src/main/resources/images/duke.svg)
 
 ### References
-1. Collections-framework-demo https://github.com/sproshchaev/collections-framework-demo/
+1. Открытый урок Otus "Алгоритмическая сложность коллекций" https://youtu.be/8TOoWr8Ss6M?si=NIumGnFdj98d_ON-  
+   ВКонтакте: https://vkvideo.ru/video-145052891_456247711
