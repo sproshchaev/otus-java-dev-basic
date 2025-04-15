@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Java IO. Часть 2 \\ ДЗ (15-04-2025)
  */
 public class Main {
 
