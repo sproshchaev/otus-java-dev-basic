@@ -1,4 +1,4 @@
-package com.prosoft;
+package ru.otus;
 
 /**
  * Java IO. Часть 2 \\ ДЗ (15-04-2025)
