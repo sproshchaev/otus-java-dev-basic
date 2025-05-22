@@ -1,7 +1,7 @@
-package com.prosoft;
+package ru.otus;
 
 /**
- * Main
+ * Java IO. Часть 2 \\ ДЗ (22-05-2025)
  */
 public class Main {
 
