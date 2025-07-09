@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 /**
- * Занятие «Jаva IO. Часть 2 \\ ДЗ» 15-04-2025
+ * Занятие «Jаva IO. Часть 2 \\ ДЗ» 09-07-2025
  * <p>
  * Чтение из файла.
  */

@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * Занятие «Jаva IO. Часть 2 \\ ДЗ» 15-04-2025
+ * Занятие «Jаva IO. Часть 2 \\ ДЗ» 09-07-2025
  * <p>
  * У нас нет Ридера и кириллица не прочитается корректно.
  */

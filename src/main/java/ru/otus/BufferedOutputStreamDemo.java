@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Занятие «Jаva IO. Часть 2 \\ ДЗ» 15-04-2025
+ * Занятие «Jаva IO. Часть 2 \\ ДЗ» 09-07-2025
  * <p>
  * Указываем кодировку - кириллица отображается корректно.
  */

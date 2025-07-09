@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 /**
- * Занятие «Jаva IO. Часть 2 \\ ДЗ» 15-04-2025
+ * Занятие «Jаva IO. Часть 2 \\ ДЗ» 09-07-2025
  * <p>
  * Как перепрыгнуть на несколько позиций .skipBytes(n) и записать символ с кодом 66.
  */

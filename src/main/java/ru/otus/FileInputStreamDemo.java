@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * Занятие «Jаva IO. Часть 2 \\ ДЗ» 15-04-2025
+ * Занятие «Jаva IO. Часть 2 \\ ДЗ» 09-07-2025
  * <p>
  * FileInputStream - у нас в названии есть Stream и нет Reader, значит мы работаем с байтовым потоком.
  * В этом случае у нас будет корректно читаться ASCII и не будет читаться кириллица.
