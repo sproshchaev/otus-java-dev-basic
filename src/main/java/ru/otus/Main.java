@@ -1,7 +1,7 @@
 package ru.otus;
 
 /**
- * Main
+ * Java IO. Часть 2 \\ ДЗ (09-07-2025)
  */
 public class Main {
 
