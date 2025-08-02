@@ -32,4 +32,4 @@ Examples from webinars
 ![duke.svg](src/main/resources/images/duke.svg)
 
 ### References
-1. Collections-framework-demo https://github.com/sproshchaev/collections-framework-demo/  
+1. Collections-framework-demo https://github.com/sproshchaev/collections-framework-demo/    
