@@ -35,12 +35,19 @@ public class Main {
         Supplier<String> someString = () -> "Hello from Supplier!";
         System.out.println(someString.get());
 
+        // (5) Custom: определить свой интерфейс через @FunctionalInterface
+        MyFunInterface greeting = () -> "Hello!";
+        System.out.println(greeting.write());
+
     }
 
     private static boolean isLengthTen(String str) {
         return str.length() == 10;
     }
 
-
+    @FunctionalInterface
+    public interface MyFunInterface {
+        String write();
+    }
 
 }
