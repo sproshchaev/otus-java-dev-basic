@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Открытый урок JavaRush: циклы и массивы
  */
 public class Main {
 
