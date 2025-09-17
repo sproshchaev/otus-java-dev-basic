@@ -1,5 +1,8 @@
 package com.prosoft.demo;
 
+/**
+ * Разные примеры исключений
+ */
 public class ExceptionsDemo {
 
         public static void main(String[] args) {
