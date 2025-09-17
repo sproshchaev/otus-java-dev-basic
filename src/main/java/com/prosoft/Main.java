@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Exceptions
  */
 public class Main {
 
