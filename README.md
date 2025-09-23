@@ -2,6 +2,8 @@
 # otus-java-dev-basic
 Examples from webinars
 
+[ListDemo01.java](src/main/java/com/prosoft/ListDemo01.java) - примеры работы с интерфейсом List и реализаций ArrayList
+
 [ListDemo02.java](src/main/java/com/prosoft/ListDemo02.java) - создание и заполнение списков строк  
 
 [ListDemo03.java](src/main/java/com/prosoft/ListDemo03.java) - основные методы работы с ArrayList: добавление, получение, замена и удаление элементов, проверка содержимого, управление емкостью списка и получение его размера   
