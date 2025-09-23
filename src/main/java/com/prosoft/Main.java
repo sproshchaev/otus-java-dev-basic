@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Занятие «Коллекции. Часть 1 \\ ДЗ» 23-09-2025
  */
 public class Main {
 
