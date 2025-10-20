@@ -6,7 +6,27 @@ package com.prosoft;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+
+        Car car = new Car("bmw", "белый", 123);
+
+        System.out.println("Автомобиль: марка " + car.getBrand()
+                + " " + car.getColor() + " " + car.getNumber());
+
+        // Объявление переменных
+        int a = 100;
+        int b = 200;
+
+        System.out.println("a+b=" + (a + b));
+
+        // 3,14
+        double pi = 3.14;
+        System.out.println("pi=" + pi);
+
+        // String
+        String stroka1 = "Это строка 1!";
+        String stroka2 = "Это строка 2!";
+        System.out.println(stroka1 + " " + stroka2);
+
     }
 
 }

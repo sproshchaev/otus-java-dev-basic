@@ -1,8 +1,11 @@
-[![Java](https://img.shields.io/badge/Java-E43222??style=for-the-badge&logo=openjdk&logoColor=FFFFFF)](https://www.java.com/)
-# otus-java-dev-basic
-Examples from webinars
 
-![duke.svg](src/main/resources/images/duke.svg)
+Запускает интерактивную сессию MongoDB Shell, подключаясь к базе данных MongoDB, которая работает в контейнере 
+с именем mongo внутри Docker-сети otus-java-dev-basic_default, используя учётные данные root:password.
+```bash
+docker run -it --rm --network otus-java-dev-basic_default mongo:8.0 mongosh "mongodb://root:password@mongo:27017"
+```
 
-### References
-1. Collections-framework-demo https://github.com/sproshchaev/collections-framework-demo/
+Выйти из консоли
+```text
+exit
+```
