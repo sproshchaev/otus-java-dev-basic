@@ -1,7 +1,7 @@
-package com.prosoft;
+package ru.otus;
 
 /**
- * Main
+ * Otus: Практикум по работе с исключениями
  */
 public class Main {
 
