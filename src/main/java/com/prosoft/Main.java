@@ -1,7 +1,7 @@
 package com.prosoft;
 
 /**
- * Main
+ * Java.Basic Коллекции часть 2 (27-05-2026)
  */
 public class Main {
 
