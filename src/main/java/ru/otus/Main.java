@@ -1,4 +1,4 @@
-package com.prosoft;
+package ru.otus;
 
 /**
  * Main
