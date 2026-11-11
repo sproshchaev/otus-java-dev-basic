@@ -6,7 +6,14 @@ package com.prosoft;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+
+        try {
+            int a = 0;
+            int b = 10 / a;
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка возникла!");
+        }
+        System.out.println("Конец программы");
     }
 
 }
