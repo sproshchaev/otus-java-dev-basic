@@ -7,6 +7,8 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class HttpServer {
     private final int port;
@@ -18,13 +20,16 @@ public class HttpServer {
     }
 
     public void start() throws IOException {
+        ExecutorService workers = Executors.newFixedThreadPool(10);
         try (ServerSocket server = new ServerSocket()) {
             server.bind(new InetSocketAddress("127.0.0.1", port));
             System.out.println("HTTP server: http://127.0.0.1:" + port + "/");
             while (true) {
                 Socket client = server.accept();
-                handleClient(client);
+                workers.execute(() -> handleClient(client));
             }
+        } finally {
+            workers.shutdown();
         }
     }
 
